@@ -1,0 +1,516 @@
+{
+    "gameId": "99595f5a-a7ec-4da8-86b1-5e625993adce",
+    "gameStatus": "Active",
+    "username": "testUser",
+    "minefield": {
+        "board": [
+            [
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 3,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 3,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 3,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 3,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 3,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 5,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 3,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 2,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 3,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 3,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Empty",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                }
+            ]
+        ],
+        "rows": 9,
+        "columns": 9,
+        "mines": 15
+    }
+}

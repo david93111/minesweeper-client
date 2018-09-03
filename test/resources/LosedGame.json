@@ -1,0 +1,40 @@
+{
+    "gameId": "8ad43a0f-1a57-405a-af4b-80990e02149c",
+    "gameStatus": "Lose",
+    "username": "testUser",
+    "minefield": {
+        "board": [
+            [
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": true,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                }
+            ]
+        ],
+        "rows": 2,
+        "columns": 2,
+        "mines": 1
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "gameId": "d9592246-385b-4e71-b886-88cabd24e5c9",
+    "gameStatus": "Active",
+    "username": "testUser",
+    "minefield": {
+        "board": [
+            [
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Mine",
+                    "content": null,
+                    "revealed": false,
+                    "mark": null
+                }
+            ],
+            [
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                },
+                {
+                    "fieldType": "Hint",
+                    "content": 1,
+                    "revealed": false,
+                    "mark": null
+                }
+            ]
+        ],
+        "rows": 2,
+        "columns": 2,
+        "mines": 1
+    }
+}
