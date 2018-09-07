@@ -1,5 +1,5 @@
 {
-    "gameId": "8a6b4c5e-aad7-488f-9493-69cef0e2bfd2",
+    "gameId": "d9592246-385b-4e71-b886-88cabd24e5c9",
     "gameStatus": "Active",
     "username": "testUser",
     "minefield": {
@@ -8,14 +8,14 @@
                 {
                     "fieldType": "Hint",
                     "content": 1,
-                    "revealed": true,
-                    "mark": "None"
+                    "revealed": false,
+                    "mark": null
                 },
                 {
                     "fieldType": "Mine",
                     "content": null,
                     "revealed": false,
-                    "mark": "FlagMark"
+                    "mark": null
                 }
             ],
             [
@@ -23,13 +23,13 @@
                     "fieldType": "Hint",
                     "content": 1,
                     "revealed": false,
-                    "mark": "QuestionMark"
+                    "mark": null
                 },
                 {
                     "fieldType": "Hint",
                     "content": 1,
                     "revealed": false,
-                    "mark": "None"
+                    "mark": null
                 }
             ]
         ],
@@ -39,6 +39,6 @@
     },
     "lastAction": "Creation",
     "revealedCells": 0,
-    "timerInSeconds": 0,
-    "paused": false
+    "timerInSeconds": 15,
+    "paused": true
 }

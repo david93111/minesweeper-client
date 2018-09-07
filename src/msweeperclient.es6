@@ -7,7 +7,8 @@ class msweeperclient {
     // Build axios instance using defined host of MineSweeper API
     constructor(host){
       this.httpClient = axios.create({
-        baseURL: host
+        baseURL: host,
+        timeout: 45000,
       });
     }
   
@@ -47,18 +48,26 @@ class msweeperclient {
       return resultPromise;
     }
 
+    // Get the historic of operations on an existing game using the gameId
+    getGameHistory(gameId) {
+      let resultPromise = this.httpClient.get('/minesweeper/game/'+gameId+'/history')
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        return this.validateError(error);
+      });
+      return resultPromise;
+    }
+
     // Reveal an existing spot on the minefield of a specified game
     revealSpot(gameId, row, column) {
       let data = {
         row: row,
         col: column
       };
-      let params = {
-        gameId: gameId
-      };
-      let resultPromise = this.httpClient.put('/minesweeper/game/reveal', {
-        data: data,
-        params: params
+      let resultPromise = this.httpClient.put('/minesweeper/game/'+gameId+'/reveal', {
+        data: data
       })
       .then((response) => {
         return response.data;
@@ -76,12 +85,8 @@ class msweeperclient {
         col: column,
         mark: mark
       };
-      let params = {
-        gameId: gameId
-      };
-      let resultPromise = this.httpClient.put('/minesweeper/game/mark', {
-        data: data,
-        params: params
+      let resultPromise = this.httpClient.put('/minesweeper/game/'+gameId+'/mark', {
+        data: data
       })
       .then((response) => {
         return response.data;
@@ -107,6 +112,30 @@ class msweeperclient {
       return this._sendMarkToSpot(gameId, row, column, "None");
     }
 
+    // Pause an existing game with the specified gameId.
+    pauseGame(gameId) {
+      let resultPromise = this.httpClient.patch('/minesweeper/game/'+gameId+'/pause')
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        return this.validateError(error);
+      });
+      return resultPromise;
+    }
+
+    // Resume an existing game with the specified gameId.
+    resumeGame(gameId) {
+      let resultPromise = this.httpClient.patch('/minesweeper/game/'+gameId+'/resume')
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        return this.validateError(error);
+      });
+      return resultPromise;
+    }
+
     validateError(error){
       let errorResult = new msweeperclient.ServerError();
       if(error.response){
@@ -124,7 +153,7 @@ class msweeperclient {
     }
 
     validateErrorResponse(errorResponse, errorResult){
-      if(errorResponse.data.cause){
+      if(errorResponse.data && errorResponse.data.cause){
           errorResult.error.cause = errorResponse.data.cause;
           errorResult.error.message = errorResponse.data.message;
           errorResult.error.apiResponse = errorResponse.data;
@@ -143,15 +172,12 @@ class msweeperclient {
       if(status === 400){
         errorResult.error.cause = 'Bad Request';
         errorResult.error.message = 'Invalid parameters or the client version yo are using is outdated for the specified API';
-      }else if(status === 401){
-        errorResult.error.cause = 'Unauthorized';
-        errorResult.error.message = 'Failed to authenticate, or resource missing for authentication';
       }else if(status === 404){
         errorResult.error.cause = 'Resource Not Found';
         errorResult.error.message = 'Invalid resource requested, or the resource you are looking for does not exist';
       }else{
         errorResult.error.cause = 'Unexpected Server Error';
-        errorResult.error.message = 'There was an unexpected error unmanaged by the API during the operation.';
+        errorResult.error.message = 'There was an unexpected error unmanaged by the API during the operation or the service is DOWN';
       }
 
       return errorResult;
@@ -159,6 +185,7 @@ class msweeperclient {
     
 }
 
+// ES6 class for manage errors on API operations 
 msweeperclient.ServerError = class ServerError{
   constructor(){
     this.error = {

@@ -1,6 +1,6 @@
 {
   "name": "minesweeper-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Client library for JavaScript to use the Scala-akka mneesweeper API",
   "main": "src/msweeperclient.es6",
   "babel": {

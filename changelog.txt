@@ -1,0 +1,12 @@
+--- v0.2.0
+    + Modified existing mark and reveal to be full compliant with API 1.0.0
+    + Added new client methods for exposed services of pause, resume and game operations history
+    + Added tests for new operations
+    + Improved test scenarios and test error handling, coverage over 80%
+
+--- v0.1.0
+    + ES6 promised based client using Axios
+    + Unit testing using mocha, chai and Axios mock adapter
+    + Build and distributions using WebPack
+    + Test coverage using Babel and Istanbul for mocha, plus nyc for reports
+    + Enviroment management for minification on distribution

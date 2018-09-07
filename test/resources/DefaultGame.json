@@ -512,5 +512,9 @@
         "rows": 9,
         "columns": 9,
         "mines": 15
-    }
+    },
+    "lastAction": "Creation",
+    "revealedCells": 0,
+    "timerInSeconds": 0,
+    "paused": false
 }

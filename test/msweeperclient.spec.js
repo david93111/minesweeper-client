@@ -7,6 +7,8 @@ let defaultGameJson = require(path.join(__dirname,"resources","DefaultGame.json"
 let customGame = require(path.join(__dirname,"resources","SmallGame.json"));
 let revealedAndMarkedGame = require(path.join(__dirname,"resources","RevealedAndMarkedGame.json"));
 let losedGame = require(path.join(__dirname,"resources","LosedGame.json"));
+let gameHistory = require(path.join(__dirname,"resources","GameHistory.json"));
+let pausedGame = require(path.join(__dirname,"resources","PausedGame.json"));
 
 // Enable chai "should" assertions.
 chai.should();
@@ -150,14 +152,47 @@ describe('MSweeper Client Test', () => {
     
     });
 
+    describe('Get history of a specified game should', () => {
+
+        it('should get historic of game if exist', (done) => {
+       
+            mock.onGet('/minesweeper/game/feed33f9-1a4e-43d0-bd34-08b65d198bc4/history').reply(200, gameHistory); 
+    
+            let game = client.getGameHistory("feed33f9-1a4e-43d0-bd34-08b65d198bc4");
+            game.then((result) => {
+                result.historic.length.should.equal(2);
+                result.historic[0].gameId.should.equal("feed33f9-1a4e-43d0-bd34-08b65d198bc4");
+                result.historic[1].gameId.should.equal("feed33f9-1a4e-43d0-bd34-08b65d198bc4");
+            })
+            .finally(done());
+        });
+
+        it('should fail if the game not exists', (done) => {
+       
+            mock.onGet('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/history')
+            .reply(404,
+                {
+                    "message": "The requested game was not found on memory or does not exist, please create a new one",
+                    "gameId": "871116d2-86d9-4be7-ab9a-46c1236ae25b",
+                    "statusCode": 404,
+                    "cause": "GameOperationFailed"
+                });
+    
+            let game = client.getGameHistory("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.error.cause.should.equal("GameOperationFailed");
+            })
+            .finally(done());
+        });
+
+
+    });
+
     describe('Reveal a spot of the minefield should', () => {
 
         it('should reveal the spot with a specified gameId and game must remain Active', (done) => {
        
-            mock.onPut('/minesweeper/game/reveal', { 
-                params: { 
-                    gameId: '8a6b4c5e-aad7-488f-9493-69cef0e2bfd2' 
-                },
+            mock.onPut('/minesweeper/game/8a6b4c5e-aad7-488f-9493-69cef0e2bfd2/reveal', { 
                 data:{
                     row: 0,
                     col: 0
@@ -176,10 +211,7 @@ describe('MSweeper Client Test', () => {
 
         it('should reveal the spot of a gameId and game must pass to Lose state', (done) => {
        
-            mock.onPut('/minesweeper/game/reveal', { 
-                params: { 
-                    gameId: '8ad43a0f-1a57-405a-af4b-80990e02149c' 
-                },
+            mock.onPut('/minesweeper/game/8ad43a0f-1a57-405a-af4b-80990e02149c/reveal', { 
                 data:{
                     row: 0,
                     col: 1
@@ -198,10 +230,7 @@ describe('MSweeper Client Test', () => {
 
         it('should fail if the spots are invalid', (done) => {
        
-            mock.onPut('/minesweeper/game/reveal', { 
-                params: { 
-                    gameId: '8ad43a0f-1a57-405a-af4b-80990e02149c' 
-                },
+            mock.onPut('/minesweeper/game/8ad43a0f-1a57-405a-af4b-80990e02149c/reveal', { 
                 data:{
                     row: 0,
                     col: -1
@@ -227,10 +256,7 @@ describe('MSweeper Client Test', () => {
 
         it('should mark the spot with a specified gameId and game must not be affected', (done) => {
        
-            mock.onPut('/minesweeper/game/mark', { 
-                params: { 
-                    gameId: '8a6b4c5e-aad7-488f-9493-69cef0e2bfd2' 
-                },
+            mock.onPut('/minesweeper/game/8a6b4c5e-aad7-488f-9493-69cef0e2bfd2/mark', {
                 data:{
                     row: 1,
                     col: 0,
@@ -250,10 +276,7 @@ describe('MSweeper Client Test', () => {
 
         it('should mark the spot with a specified gameId and game must not be affected', (done) => {
        
-            mock.onPut('/minesweeper/game/mark', { 
-                params: { 
-                    gameId: '8a6b4c5e-aad7-488f-9493-69cef0e2bfd2' 
-                },
+            mock.onPut('/minesweeper/game/8a6b4c5e-aad7-488f-9493-69cef0e2bfd2/mark', {
                 data:{
                     row: 0,
                     col: 1,
@@ -273,10 +296,7 @@ describe('MSweeper Client Test', () => {
 
         it('should remove the mark on a spot with the specified gameId and game must not be affected', (done) => {
        
-            mock.onPut('/minesweeper/game/mark', { 
-                params: { 
-                    gameId: '8a6b4c5e-aad7-488f-9493-69cef0e2bfd2' 
-                },
+            mock.onPut('/minesweeper/game/8a6b4c5e-aad7-488f-9493-69cef0e2bfd2/mark', {
                 data:{
                     row: 0,
                     col: 0,
@@ -296,10 +316,7 @@ describe('MSweeper Client Test', () => {
 
         it('should fail if someone try to send anything as mark using the private intended _mark function', (done) => {
        
-            mock.onPut('/minesweeper/game/mark', { 
-                params: { 
-                    gameId: '8a6b4c5e-aad7-488f-9493-69cef0e2bfd2' 
-                },
+            mock.onPut('/minesweeper/game/8a6b4c5e-aad7-488f-9493-69cef0e2bfd2/mark', {
                 data:{
                     row: 0,
                     col: 0,
@@ -319,6 +336,130 @@ describe('MSweeper Client Test', () => {
             .finally(done());
         });
 
+
+    });
+
+    describe('Pause a game should', () => {
+
+        it('should pause the game if exists', (done) => {
+       
+            mock.onPatch('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/pause').reply(200, pausedGame); 
+    
+            let game = client.pauseGame("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.gameStatus.should.equal("Active");
+                result.gameId.should.equal("d9592246-385b-4e71-b886-88cabd24e5c9");
+                result.paused.should.equal(true);
+            })
+            .finally(done());
+        });
+
+        it('should fail if the game not exists', (done) => {
+       
+            mock.onPatch('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/pause')
+            .reply(404,
+                {
+                    "message": "The requested game was not found on memory or does not exist, please create a new one",
+                    "gameId": "871116d2-86d9-4be7-ab9a-46c1236ae25b",
+                    "statusCode": 404,
+                    "cause": "GameOperationFailed"
+                });
+    
+            let game = client.pauseGame("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.error.cause.should.equal("GameOperationFailed");
+            })
+            .finally(done());
+        });
+
+
+    });
+
+    describe('Resume a game should', () => {
+
+        it('should resume the game if exists', (done) => {
+       
+            mock.onPatch('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/resume').reply(200, customGame); 
+    
+            let game = client.resumeGame("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.gameStatus.should.equal("Active");
+                result.gameId.should.equal("d9592246-385b-4e71-b886-88cabd24e5c9");
+                result.paused.should.equal(false);
+            })
+            .finally(done());
+        });
+
+        it('should fail if the game not exists', (done) => {
+       
+            mock.onPatch('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/resume')
+            .reply(404,
+                {
+                    "message": "The requested game was not found on memory or does not exist, please create a new one",
+                    "gameId": "871116d2-86d9-4be7-ab9a-46c1236ae25b",
+                    "statusCode": 404,
+                    "cause": "GameOperationFailed"
+                });
+    
+            let game = client.resumeGame("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.error.cause.should.equal("GameOperationFailed");
+            })
+            .finally(done());
+        });
+
+
+    });
+
+    describe('Client Error Handling should', () => {
+
+        it('Manage if API is request with a invalid client', (done) => {
+       
+            mock.onPatch('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/resume')
+            .reply(400,"Requested resurce does not receive method used, available GET");
+    
+            let game = client.resumeGame("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.error.cause.should.equal("Bad Request");
+            })
+            .finally(done());
+        });
+
+        it('Manage if API has an unexpected error', (done) => {
+       
+            mock.onPatch('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/resume')
+            .reply(500,"Unexpected Error");
+    
+            let game = client.resumeGame("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.error.cause.should.equal("Unexpected Server Error");
+            })
+            .finally(done());
+        });
+
+        it('Manage if API resource is not loger available', (done) => {
+       
+            mock.onPatch('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/resume')
+            .reply(404,"The resource does not exist");
+    
+            let game = client.resumeGame("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.error.cause.should.equal("Resource Not Found");
+            })
+            .finally(done());
+        });
+
+        it('Manage if API is down but server there is response', (done) => {
+       
+            mock.onPatch('/minesweeper/game/d9592246-385b-4e71-b886-88cabd24e5c9/resume')
+            .reply(503);
+    
+            let game = client.resumeGame("d9592246-385b-4e71-b886-88cabd24e5c9");
+            game.then((result) => {
+                result.error.cause.should.equal("Unexpected Server Error");
+            })
+            .finally(done());
+        });
 
     });
 

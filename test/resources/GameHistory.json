@@ -1,0 +1,456 @@
+{
+    "historic": [
+        {
+            "gameId": "feed33f9-1a4e-43d0-bd34-08b65d198bc4",
+            "gameStatus": "Active",
+            "username": "testUser",
+            "minefield": {
+                "board": [
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 0,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 0,
+                            "col": 1,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 0,
+                            "col": 2,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 0,
+                            "col": 3,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 0,
+                            "col": 4,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ],
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 1,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 1,
+                            "col": 1,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 1,
+                            "col": 2,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 1,
+                            "col": 3,
+                            "content": 3,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 1,
+                            "col": 4,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ],
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 2,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 2,
+                            "col": 1,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 2,
+                            "col": 2,
+                            "content": 3,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 2,
+                            "col": 3,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 2,
+                            "col": 4,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ],
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 3,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 3,
+                            "col": 1,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 3,
+                            "col": 2,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 3,
+                            "col": 3,
+                            "content": 3,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 3,
+                            "col": 4,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ],
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 4,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 4,
+                            "col": 1,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 4,
+                            "col": 2,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 4,
+                            "col": 3,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 4,
+                            "col": 4,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ]
+                ],
+                "rows": 5,
+                "columns": 5,
+                "mines": 5
+            },
+            "lastAction": "AutoPaused",
+            "revealedCells": 0,
+            "timerInSeconds": 1805,
+            "paused": true
+        },
+        {
+            "gameId": "feed33f9-1a4e-43d0-bd34-08b65d198bc4",
+            "gameStatus": "Active",
+            "username": "testUser",
+            "minefield": {
+                "board": [
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 0,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 0,
+                            "col": 1,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 0,
+                            "col": 2,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 0,
+                            "col": 3,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 0,
+                            "col": 4,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ],
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 1,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 1,
+                            "col": 1,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 1,
+                            "col": 2,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 1,
+                            "col": 3,
+                            "content": 3,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 1,
+                            "col": 4,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ],
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 2,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 2,
+                            "col": 1,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 2,
+                            "col": 2,
+                            "content": 3,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 2,
+                            "col": 3,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 2,
+                            "col": 4,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ],
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 3,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 3,
+                            "col": 1,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 3,
+                            "col": 2,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 3,
+                            "col": 3,
+                            "content": 3,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 3,
+                            "col": 4,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ],
+                    [
+                        {
+                            "fieldType": "Empty",
+                            "row": 4,
+                            "col": 0,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 4,
+                            "col": 1,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 4,
+                            "col": 2,
+                            "content": 1,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Hint",
+                            "row": 4,
+                            "col": 3,
+                            "content": 2,
+                            "revealed": false,
+                            "mark": "None"
+                        },
+                        {
+                            "fieldType": "Mine",
+                            "row": 4,
+                            "col": 4,
+                            "content": null,
+                            "revealed": false,
+                            "mark": "None"
+                        }
+                    ]
+                ],
+                "rows": 5,
+                "columns": 5,
+                "mines": 5
+            },
+            "lastAction": "Creation",
+            "revealedCells": 0,
+            "timerInSeconds": 0,
+            "paused": false
+        }
+    ]
+}

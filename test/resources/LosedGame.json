@@ -36,5 +36,9 @@
         "rows": 2,
         "columns": 2,
         "mines": 1
-    }
+    },
+    "lastAction": "Creation",
+    "revealedCells": 0,
+    "timerInSeconds": 0,
+    "paused": false
 }
